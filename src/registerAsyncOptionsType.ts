@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-export class HelloWorldService {
-  public getHelloWorldMessage(): string {
-    return "Hello World!";
-  }
-}
+import { FactoryProvider, ModuleMetadata } from "@nestjs/common";
+
+export type TRegisterAsyncOptions<TConfig> = Pick<ModuleMetadata, "imports"> &
+  Partial<
+    Pick<FactoryProvider<Promise<TConfig> | TConfig>, "inject" | "useFactory">
+  >;
