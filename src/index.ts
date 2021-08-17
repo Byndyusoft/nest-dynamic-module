@@ -14,4 +14,5 @@
  * limitations under the License.
  */
 
-export * from "./hello-world.service";
+export * from "./dynamicModuleHelper";
+export * from "./registerAsyncOptionsType";
